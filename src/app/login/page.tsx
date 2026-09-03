@@ -26,6 +26,12 @@ export default function LoginPage() {
         <SubmitButton pendingLabel="Logging in…">Log in</SubmitButton>
       </form>
 
+      <p className="-mt-4 text-label text-text-secondary">
+        <Link href="/forgot-password" className="text-link underline underline-offset-2">
+          Forgot password?
+        </Link>
+      </p>
+
       <p className="text-body text-text-secondary">
         New here?{" "}
         <Link href="/signup" className="text-link underline underline-offset-2">

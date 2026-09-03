@@ -45,3 +45,6 @@ files.zip
 /files/
 Parent-sync-*.png
 babyluna_sync_architecture-diagram.png
+
+.vercel
+.env*
