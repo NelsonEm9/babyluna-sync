@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+ * Design tokens for BabyLuna Sync's "Day Rail" timeline direction — updated
+ * to the rose/pink overdue palette + vertical-rail layout from the latest
+ * reference mockups (dashboard rail, task detail, settings).
+ */
+@theme {
+  --font-sans: var(--font-work-sans), ui-sans-serif, system-ui, sans-serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-bg: #eef1f4;
+  --color-bg-header-from: #e4ebf2;
+  --color-surface: #ffffff;
+  --color-surface-done: #e7ecf1;
+  --color-surface-overdue: #fbe4ec;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-text-primary: #182430;
+  --color-text-secondary: #7d8a99;
+  --color-text-meta: #8b98a6;
+
+  --color-border: #dde3e9;
+  --color-border-strong: #d3dbe3;
+  --color-border-dashed: #c4cfda;
+  --color-border-light: #edf1f4;
+
+  --color-status-done: #4a5b6b;
+  --color-status-due: #4b6b8f;
+  --color-status-due-border: #b9c8d8;
+  --color-status-overdue: #b23a63;
+  --color-status-overdue-strong: #7a2340;
+  --color-status-overdue-border: #eeb3c9;
+  --color-status-overdue-page-bg: #f9dde6;
+
+  --color-brand: #182430;
+  --color-destructive: #b23a63;
+  --color-link: #4b6b8f;
+
+  --color-chip-them-bg: #dbe3ea;
+  --color-chip-them-text: #3d5468;
+  --color-chip-me-bg: #182430;
+  --color-chip-me-text: #ffffff;
+
+  /* Tailwind v4's spacing scale is a multiplier of --spacing (0.25rem), so
+     1b's non-default steps (18px, 22px, 26px) already work as p-4.5,
+     gap-5.5, mt-6.5, etc. with no extra tokens needed here. */
+
+  --radius-btn: 0.75rem; /* 12px */
+  --radius-card: 0.875rem; /* 14px */
+  --radius-chip: 0.5rem; /* 8px */
+
+  --text-meta: 0.6875rem; /* 11px */
+  --text-meta--line-height: 1.3;
+  --text-label: 0.78125rem; /* 12.5px */
+  --text-label--line-height: 1.3;
+  --text-body: 0.875rem; /* 14px */
+  --text-body--line-height: 1.4;
+  --text-body-lg: 0.96875rem; /* 15.5px */
+  --text-body-lg--line-height: 1.4;
+  --text-subhead: 1.0625rem; /* 17px */
+  --text-subhead--line-height: 1.3;
+  --text-title: 1.1875rem; /* 19px */
+  --text-title--line-height: 1.2;
+  --text-heading: 1.375rem; /* 22px */
+  --text-heading--line-height: 1.15;
+  --text-display: 1.625rem; /* 26px */
+  --text-display--line-height: 1.05;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
 }

@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# design reference assets (not app source)
+files.zip
+/files/
+Parent-sync-*.png
+babyluna_sync_architecture-diagram.png
